@@ -49,25 +49,11 @@ node index.js
 Note: The chatbot is designed to run on a server, so you may need to deploy it to a cloud service or setup your own server to run the bot 24/7. You can use [heroku](https://heroku.com) or [render](https://render.com). On heroku you may have to install buildpack for puppeteer, However Render comes with puppeteer and ffmpeg support. 
 
 
-## Usage
-The chatbot can respond to user messages in either text or voice note format. You can initiate a conversation with the bot by sending it a message or voice note on Whatsapp.
-
-Here is the demo of the chat with a bot based on whatsapp-gpt implementation
-
-![whatsapp-gpt-text-demo](https://i.ibb.co/NYHC3g4/whatsapp-gpt-text.gif)
-
-If you ask the bot for an image, it will prompt you for a detailed description of the image you want. Once you provide a description, the bot will generate the image using the DALL-E API and send it back to you. The dimensions of the image can be customized by the user in the prompt, but the default values are 512x512. 
-
-Note: The bot may ask for additional information or clarification if it is necessary to generate the image. 
-
 
 To generate images with DALL-E you can write command as:
 ```whatsapp-gpt
 Generate an image of beautiful landscape. A mountain and a river.
 ```
-
-Result of the prompt:
-![whatsapp-gpt-dalle-demo](https://i.ibb.co/W56Bj0F/whatsapp-gpt-vid.gif)
 
 
 ### Commands
@@ -77,7 +63,6 @@ The following commands are available:
 - `%%help` - Display information about available commands
 
 ## Example
-You can test [whatsapp-gpt](https://wa.me/923234311349) which was deployed on render using this repository. 
 KEEP IN MIND to not to send any personal information as the backend is using whatsapp web on headless browser, Your conversation is maybe accessible to the author
 
 ## Contribution
