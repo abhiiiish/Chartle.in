@@ -46,11 +46,6 @@ if (fs.existsSync('conversationHistory.json')) {
     conversationHistory = JSON.parse(data);
 }
 
-client.on('qr', (qr) => {
-    // Generate and scan this code with your phone
-    console.log('QR RECEIVED: ', qr);
-    qrcode.generate(qr, { small: true })
-});
 
 async function handleMedia(message) {
     const media = await message.downloadMedia();
@@ -218,6 +213,12 @@ client.on('disconnected', async (reason) => {
     await client.destroy();
     client.initialize();
 })
+
+client.on('qr', (qr) => {
+    // Generate and scan this code with your phone
+    console.log('QR RECEIVED: ', qr);
+    qrcode.generate(qr, { small: true })
+});
 
 // Reset chat after every hour
 function resetChat() {
