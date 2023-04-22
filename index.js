@@ -35,7 +35,7 @@ const client = new Client({
 });
 
 const MAX_TOKENS = 4096; // Max number of tokens that can be used in a single request
-const REQUEST_LIMIT = 15; // Max number of requests that can be made in a day
+const REQUEST_LIMIT = 100; // Max number of requests that can be made in a day
 let conversationHistory = {};
 let requestCount = {};
 const warned = [];
